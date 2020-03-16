@@ -12,17 +12,15 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Adam Denisov
-  tagline: Developer. Designer
+  name: Patrick Cull
+  tagline: Irish DBA
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
+    github:  paddycull
+    linkedIn: in/patrick-cull-a4802165
     # dribbble: jekyll
     # facebook: jekyll
     # flickr:   jekyll
