@@ -13,12 +13,10 @@ title: Patrick Cull                          # the main title
 tagline: DBA from Ireland  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  I'm a DBA from Ireland and I work with Oracle and SQL Server databases. I love autoamtion and work mainly with PowerShell.
 
 # Replace with your domain, e.g. 'https://username.github.io'
-url: 'https://paddycull.com'
+url: 'https://www.paddycull.com'
 
 author: Patrick Cull                # change to your full name
 
