@@ -1,7 +1,9 @@
 ---
 published: true
-title: "First Post"
-tags: ["powershell"]
+title: First Post
+tags: [powershell]
+seo:
+  date_modified: 2020-03-17 18:41:33 +0000
 ---
 
 ## A New Post
