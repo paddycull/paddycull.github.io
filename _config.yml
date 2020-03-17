@@ -10,10 +10,10 @@
 
 title: Patrick Cull                          # the main title
 
-tagline: I'm a DBA from Ireland. I love autoamtion and work mainly with PowerShell.  # it will display as the sub-title
+tagline: I'm a DBA from Ireland. I love automation and work mainly with PowerShell.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  I'm a DBA from Ireland and I work with Oracle and SQL Server databases. I love autoamtion and work mainly with PowerShell.
+  I'm a Database Administrator from Ireland and I work with Oracle and SQL Server databases. I love automation and work mainly with PowerShell.
 
 # Replace with your domain, e.g. 'https://username.github.io'
 url: 'https://www.paddycull.com'
@@ -27,7 +27,7 @@ github:
 
 linkedin:
   username: patrick-cull-a4802165
-  
+
 social:
   name: Patrick Cull                  # it will shows as the copyright owner in Footer
   email: paddycull9@hotmail.com             # change to your email address

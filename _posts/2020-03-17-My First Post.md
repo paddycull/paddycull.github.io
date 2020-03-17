@@ -1,7 +1,7 @@
 ---
 published: true
 title: "First Post"
-tags: ["powershell", "posh"]
+tags: ["powershell"]
 ---
 
 ## A New Post
