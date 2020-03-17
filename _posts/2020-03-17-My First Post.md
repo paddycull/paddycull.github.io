@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ---
 title: "First Post"
@@ -12,4 +12,4 @@ I'll be using this blog for PowerShell and other DBA things. Testing syntax high
 
 `$TestVar = Get-Service -ComputerName localhost`
 
-End post 
+End post
