@@ -104,7 +104,7 @@ $tab-count: {{ site.data.tabs | size }};
     letter-spacing: 1px;
   }
   .nav-item {
-    height: $tab-height;
+    //height: $tab-height;
     &:hover {
       .nav-link {
         color: #f8f9facf;
@@ -117,7 +117,7 @@ $tab-count: {{ site.data.tabs | size }};
     }
   }
   ul {
-    height: $tab-height * $tab-count;
+    //height: $tab-height * $tab-count;
     display: -webkit-box;
     display: -ms-flexbox;
 
@@ -255,7 +255,7 @@ $tab-count: {{ site.data.tabs | size }};
 #site-title {
   text-align: center;
   a {
-    color: #b6b6b6;
+    color: #ddd;
     font-weight: 900;
     font-size: 1.5rem;
     letter-spacing: .5px;
@@ -273,6 +273,7 @@ $tab-count: {{ site.data.tabs | size }};
   line-height: 1.2rem;
   word-spacing: 1px;
   margin: .5rem 1.5rem 2rem 1.5rem;
+  font-style: normal!important;
 }
 
 .sidebar-expand {
@@ -1021,7 +1022,7 @@ table {
 
   /* button 'back-to-Top' position */
   #back-to-top {
-    bottom: 5.5rem;
+    bottom: 2rem;
     right: 1.2rem;
   }
 
@@ -1248,7 +1249,7 @@ table {
   }
 
   #back-to-top {
-    bottom: 6.5rem;
+    bottom: 2rem;
     right: 4.3rem;
   }
 
