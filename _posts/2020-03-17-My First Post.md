@@ -1,7 +1,5 @@
 ---
 published: true
----
----
 title: "First Post"
 tags: ["powershell", "posh"]
 ---
