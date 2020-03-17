@@ -10,7 +10,7 @@ This is my first blog post on this site. I thought it would be appropriate to us
 The code is available on my GitHub [here]('https://github.com/paddycull/New-JekyllBlogPost')
 
 ## Why?
-When playing around with Jekyll, I found it tiresome setting the filename with the correct date format, and then also adding it to the post parameters. So I thought it would be fun and useful to create a small simple function that automates the initialization of the md file :smiley:
+When playing around with Jekyll, I found it tiresome setting the filename with the correct date format, and then also adding it to the post parameters. So I thought it would be fun and useful to create a small simple function that automates the initialization of the md file. :slightly_smiling_face:
 
 ## Features
 The script initialises the Jekyll post md file with the following parameters;
@@ -29,7 +29,7 @@ A simple example is;
 New-JekyllBlogPost -PostTitle "New-JekyllBlogPost PowerShell function" -Categories "PowerShell", "Jekyll" -Tags "automation"
 ```
 
-This creates a new file called '2020-03-17-New-JekyllBlogPost PowerShell function.md', in whatever directory the $LocalPostDirectory variable of teh function is set to, and sets the category and tags. It also sets the date in the Jekyll file to the current date time. Code snippets and explanations are below.
+This creates a new file called '2020-03-17-New-JekyllBlogPost PowerShell function.md', in whatever directory the **$LocalPostDirectory** variable of the function is set to, and sets the category and tags. Note the current date is set in the filename, as required by Jekyll. It also sets the date in the Jekyll file to the current date time in the required format. Code snippets and explanations are below.
 
 ## The Code
 The **datetime** parameter is set to the current date and time in the correct format for Jekyll, within the function declaration itself;
