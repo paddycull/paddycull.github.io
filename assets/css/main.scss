@@ -199,6 +199,7 @@ $tab-count: {{ site.data.tabs | size }};
   }
 } // #sidebar
 
+
 @media (hover: hover) {
   #sidebar ul>li:last-child::after {
     -webkit-transition: top .5s ease;
@@ -1509,4 +1510,12 @@ table {
   #panel-wrapper {
     margin-left: 41px;
   }
+}
+
+/*custom css*/
+.emoji {
+  position: inherit !important;
+  margin-top: auto !important;
+  margin-bottom: 0.2em !important;
+  margin-left: 10px;
 }
