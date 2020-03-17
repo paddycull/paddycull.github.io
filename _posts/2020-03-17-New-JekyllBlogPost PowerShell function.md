@@ -14,14 +14,14 @@ When playing around with Jekyll, I found it tiresome setting the filename with t
 
 ## Features
 The script initialises the Jekyll post md file with the following parameters;
-* **layout** - set to "post"
+* **layout** - set to "post" which is the type of layout this function will be used for.
 * **title** - Set with the -PostTitle function parameter
 * **date** - Defaults to the current date formatted correctly for the Jekyll file
 * **tags** - Set by the user with the -Tags parameter of the function.
 
 It creates the file in the directory that LocalPostDirectory variable is set to, which should be set to the _posts directory of the Jekyll site on the users machine.
 
-It then opens the file in the default md file editor on the users amchine. 
+It then opens the file in the default md file editor on the users machine. 
 
 ## Usage
 A simple example is;
