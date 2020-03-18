@@ -4,6 +4,7 @@ title: New-JekyllBlogPost PowerShell function
 date: 2020-03-17 19:50:24
 categories: [PowerShell, Jekyll]
 tags: [automation]
+comments: true
 seo:
   date_modified: 2020-03-18 12:53:02 +0000
 ---
