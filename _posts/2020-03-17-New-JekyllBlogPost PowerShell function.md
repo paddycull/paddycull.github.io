@@ -75,7 +75,7 @@ if(Test-Path $BlogFilePath) {
 ```
 Finally, we create the file with the string from above. It is important to use **-Encoding ascii** , as without it PowerShell default encoding does not work with Jekyll.
 ```powershell
-$CreateString | $BlogFilePath -Encoding ascii
+$CreateString | Out-File $BlogFilePath -Encoding ascii
 ```
 
 I also added a **DoNotOpen** switch to the function, in case the user does not want to open the file immediately after it's created. By default, it is opened in the users default md file editor;
