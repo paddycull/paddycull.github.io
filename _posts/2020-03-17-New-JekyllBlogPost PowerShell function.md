@@ -4,6 +4,8 @@ title: New-JekyllBlogPost PowerShell function
 date: 2020-03-17 19:50:24
 categories: [PowerShell, Jekyll]
 tags: [automation]
+seo:
+  date_modified: 2020-03-18 12:53:02 +0000
 ---
 This is my first blog post on this site. I thought it would be appropriate to use it to share a small, simple PowerShell script I created to automatically initialise a Jekyll post .md file with the required parameters. :slightly_smiling_face:
 
