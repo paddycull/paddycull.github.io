@@ -15,7 +15,7 @@ title: Categories
   {% assign posts_of_category = category | last %}
   {% assign first_post = posts_of_category[0] %}
 
-  <div class="card">
+  <div class="card categories">
     <!-- top-category -->
     <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_{{ category_name }}">
       <span>
