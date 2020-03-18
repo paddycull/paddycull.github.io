@@ -75,7 +75,7 @@ main() {
 
   cd $WORK_DIR
 
-  check_status
+  #check_status
 
   update_files
 
