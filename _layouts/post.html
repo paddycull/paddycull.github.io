@@ -126,10 +126,25 @@ layout: default
 
       {% include related-posts.html %}
 
+      {% if page.comments %}
+      <div class="row">
+            <script src="https://utteranc.es/client.js"
+            repo="paddycull/paddycull.github.io"
+            issue-term="pathname"
+            label="Comment"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+          </script>
+      </div> <!-- .row -->
+      {% endif %}
+
     </div> <!-- .pl-1 pr-1 -->
 
   </div> <!-- #post-extend-wrapper -->
 
 </div> <!-- .row -->
+
+
 
 {% include lozad.html %}
