@@ -24,7 +24,7 @@ check_status() {
 
 
 update_files() {
-  py _scripts/py/init_all.py
+  python _scripts/py/init_all.py
   find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 }
 
