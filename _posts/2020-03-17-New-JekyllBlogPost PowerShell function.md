@@ -22,7 +22,7 @@ The script initialises the Jekyll post md file with the following parameters;
 * **date** - Defaults to the current date formatted correctly for the Jekyll file
 * **categories** - Set by the user with the -Categories function parameter
 * **tags** - Set by the user with the -Tags function parameter
-* **comments** - Set to enabled.
+* **comments** - Set to true.
 
 
 It creates the file in the directory that LocalPostDirectory variable is set to, which should be set to the _posts directory of the Jekyll site on the users machine.
@@ -58,6 +58,7 @@ title: $PostTitle
 date: $datetime
 categories: [$CategoriesJoined]
 tags: [$TagsJoined]
+comments: true
 ---
 "@
 ```
