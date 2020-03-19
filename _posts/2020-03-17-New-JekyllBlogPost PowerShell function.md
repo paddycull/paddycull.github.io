@@ -10,7 +10,7 @@ seo:
 ---
 This is my first blog post on this site. I thought it would be appropriate to use it to share a small, simple PowerShell script I created to automatically initialise a Jekyll post .md file with the required parameters. :slightly_smiling_face:
 
-The code is available on my GitHub <a href='https://github.com/paddycull/New-JekyllBlogPost'>here</a> 
+The code is available on my GitHub <a target="_blank" href='https://github.com/paddycull/New-JekyllBlogPost'>here</a> 
 
 ## Why?
 When playing around with Jekyll, I found it tiresome setting the filename with the correct date format, and then also adding it to the post parameters. So I thought it would be fun and useful to create a small simple function that automates the initialization of the md file. :slightly_smiling_face:
