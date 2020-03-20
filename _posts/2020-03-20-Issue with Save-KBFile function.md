@@ -6,6 +6,8 @@ categories: [PowerShell, SqlServer]
 tags: [powershell, sqlserver, save-kbfile, issue]
 comments: true
 imgpath: \assets\img\posts\2020-03-20-Issue_with_Save-KBFile_function
+seo:
+  date_modified: 2020-03-20 16:11:29 +0000
 ---
 
 I was recently working on a way to use PowerShell to download SQL Server patches automatically. I came across a great function by Chrissy LeMaire (creator of the excellent <a href="https://dbatools.io/">dbatools</a> module), called "Save-KBFile", on Github <a href="https://gist.github.com/potatoqualitee/b5ed9d584c79f4b662ec38bd63e70a2d">here</a>.
