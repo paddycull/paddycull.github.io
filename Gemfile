@@ -19,3 +19,5 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Emojii
 gem 'jemoji'
+
+gem 'activesupport', '~> 4.1', '>= 4.1.11'
