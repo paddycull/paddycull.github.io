@@ -59,7 +59,7 @@ while(!$links -and $RetryCount -ne 10) {
 
 This works well, even though it may take a few tries. It has consistently returned the download file within the 10 allowed in my testing. You can see the retries in the Verbose output below, and it has started to download the file requested;
 
-<img src="{{ page.imgpath }}/RetryDownload.png">
+<img src="{{ page.imgpath }}/RetryDownload.PNG">
 
 
 I'll be uploading my modified version of the Save-KBFile, along with the SQL Patches download function I use it for, soon! :slightly_smiling_face:
