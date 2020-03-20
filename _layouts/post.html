@@ -120,12 +120,6 @@ layout: default
 
       {% include post-nav.html %}
 
-      {% if site.disqus.comments and page.comments %}
-        {% include disqus.html %}
-      {% endif %}
-
-      {% include related-posts.html %}
-
       {% if page.comments %}
       <div class="row">
             <script src="https://utteranc.es/client.js"
@@ -138,6 +132,12 @@ layout: default
           </script>
       </div> <!-- .row -->
       {% endif %}
+
+      {% if site.disqus.comments and page.comments %}
+        {% include disqus.html %}
+      {% endif %}
+
+      {% include related-posts.html %}
 
     </div> <!-- .pl-1 pr-1 -->
 
