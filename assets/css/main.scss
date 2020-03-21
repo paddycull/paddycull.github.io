@@ -305,7 +305,8 @@ $tab-count: {{ site.data.tabs | size }};
   z-index: 50;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--topbar-wrapper-bg);
+  //background-color: var(--topbar-wrapper-bg);
+  background-color: var(--sidebar-bg);
 }
 
 #topbar i { // icons
@@ -314,10 +315,14 @@ $tab-count: {{ site.data.tabs | size }};
 
 #breadcrumb {
   font-size: 1rem;
-  color: gray;
+  color: #eee;
   padding-left: .5rem;
+  a {
+    color: rgb(138, 180, 248);
+  }
   a:hover {
-    @extend %link-hover;
+    //@extend %link-hover;
+    text-decoration:underline;
   }
   span {
     &:not(:last-child) {
