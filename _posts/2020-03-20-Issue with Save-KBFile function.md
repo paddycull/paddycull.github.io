@@ -14,7 +14,7 @@ I was recently working on a way to use PowerShell to download SQL Server patches
 
 The function worked great it seemed, you simply give it the KB number , and optionally a download location, and it downloads the file from Microsoft. Exactly what I needed!
 
-I came across an issue while using it though. I would get the following error almost every other time I ran the function;
+I came across an issue while using it though. I would an error almost every other time I ran the function. "No file found for $name" (**$name** being the KB number I wanted to download), as shown below;
 
 <img src="{{ page.imgpath }}/ErrorMessage.png">
 
