@@ -1060,6 +1060,16 @@ table {
   }
 }
 
+#profile-wrapper.mobile-only{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  a{
+    color: var(--sidebar-bg);
+  }
+}
+
+.mobile-only{
+  display:none !important;
+}
 
 /* Hide SideBar and TOC */
 @media all and (max-width: 830px) {
@@ -1069,6 +1079,13 @@ table {
     ~#main-wrapper {
       transform: translateX(#{$sidebar-width-medium}) !important;
     }
+  }
+
+  .mobile-only{
+    display:block!important;
+  }
+  .desktop-only{
+    display:none!important;
   }
 
   #sidebar {

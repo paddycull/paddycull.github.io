@@ -7,6 +7,26 @@ layout: page
 # MIT Licensed
 ---
 
+<div id="profile-wrapper" class="d-flex flex-column mobile-only">
+  <div id="avatar" class="d-flex justify-content-center">
+    <a href="{{ site.baseurl }}/" alt="avatar">
+      {% assign avatar_url = site.avatar %}
+      {% capture start %}{{ site.avatar | slice: 0 }}{% endcapture %}
+      {% if start == '/' %}
+        {% assign avatar_url = avatar_url | prepend: site.baseurl %}
+      {% endif %}
+      <img src="{{ avatar_url }}" alt="avatar">
+    </a>
+  </div>
+
+  <div class="profile-text mt-3">
+    <div id="site-title">
+      <a href="{{ site.baseurl }}/">{{- site.title -}}</a>
+    </div>
+    <div id="site-subtitle">{{- site.description -}}</div>
+  </div>
+</div>
+
 <div id="post-list">
   {% for post in paginator.posts %}
   <div class="post-preview">
