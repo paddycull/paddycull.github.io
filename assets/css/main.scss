@@ -1545,3 +1545,19 @@ table {
   margin-bottom: 0.2em !important;
   margin-left: 10px;
 }
+.img-subheader {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:-1.5rem;
+  text-align: center;
+  display: block;
+  font-style:italic;
+  font-size:0.8rem;
+}
+
+.post h1 {
+  border-bottom:1px solid rgba(0,0,0,0.07);
+}
+.post h2{
+  text-decoration:underline;
+}
