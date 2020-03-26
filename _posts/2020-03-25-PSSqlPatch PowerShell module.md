@@ -78,10 +78,12 @@ Here it downloads the latest SP first and then the latest CU;
 <span class="img-subheader">Downloading CU12 for SQL Server 2016</span>
 
 and the PSObject it returns;
+
 <img src="{{ page.imgpath }}/2016DownloadObjectResult.png">
 <span class="img-subheader">2016 Patches PSObject</span>
 
 And finally, the folder structure it creates. The SP is stored at the root of the SP folder, and a new folder to contain the CU is created within. 
+
 <img src="{{ page.imgpath }}/2016FolderStructure.png">
 <span class="img-subheader">2016 Folder Structure</span>
 
