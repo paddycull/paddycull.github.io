@@ -7,6 +7,19 @@
 -->
 
 <head>
+  <!-- ga -->
+  {% if jekyll.environment == 'production' %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41322716-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41322716-2');
+    </script>
+  {% endif %}
+  
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,20 +38,6 @@
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
-  <!-- ga -->
-  {% if jekyll.environment == 'production' %}
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-    {% if site.google_analytics.proxy_baseurl and site.google_analytics.pv %}
-      <link rel="preconnect" href="{{ site.google_analytics.proxy_baseurl }}" crossorigin="use-credentials">
-      <link rel="dns-prefetch" href="{{ site.google_analytics.proxy_baseurl }}">
-    {% endif %}
-  {% endif %}
 
   <!-- jsdelivr CDN -->
   <link rel="preconnect" href="cdn.jsdelivr.net">
