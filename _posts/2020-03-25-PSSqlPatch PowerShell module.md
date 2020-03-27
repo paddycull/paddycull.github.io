@@ -9,7 +9,7 @@ imgpath: /assets/img/posts/2020-03-25-PSSqlPatch_PowerShell_module
 seo:
   date_modified: 2020-03-25 22:10:01 +0000
 ---
-I've created a PowerShell module that can check for and download the latest SQL Server from Microsoft. The module currently consists of two functions, Get-SPSqlPatch and Save-SPSqlPatch. In this post I'll go through their usage and outputs. You can check and download the module from my Github <a href="https://github.com/paddycull/PSSqlPatch" target="_blank">here</a>.
+I've created a PowerShell module that can check for and download the latest SQL Server patch from Microsoft. The module currently consists of two functions, Get-SPSqlPatch and Save-SPSqlPatch. In this post I'll go through their usage and outputs. You can check and download the module from my Github <a href="https://github.com/paddycull/PSSqlPatch" target="_blank">here</a>.
 
 # Get-SPSqlPatch
 The Get-SPSqlPatch function accesses the Microsoft SQL patch page, which displays the latest patches available for each version of SQL Server. The website is <a href="https://technet.microsoft.com/en-us/library/ff803383.aspx" target="_blank">here</a>, so you can see what it looks like.
