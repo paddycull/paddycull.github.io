@@ -8,22 +8,22 @@ comments: true
 seo:
   date_modified: 2020-03-31 13:39:56 +0100
 ---
-*Update 2020-03-31 - The function now automatically creates an image directory and variable for all new posts. Details below.*
-
 This is my first blog post on this site. I thought it would be appropriate to use it to share a small, simple PowerShell script I created to automatically initialise a Jekyll post .md file with the required parameters. :slightly_smiling_face:
 
 The code is available on my GitHub <a target="_blank" href='https://github.com/paddycull/New-JekyllBlogPost'>here</a> 
 
+*Update 2020-03-31 - The function now automatically creates an image directory and variable for all new posts. Details below.*
+
 ## Why?
-When playing around with Jekyll, I found it tiresome setting the filename with the correct date format, and then also adding it to the post parameters. So I thought it would be fun and useful to create a small simple function that automates the initialization of the md file. :slightly_smiling_face:
+When playing around with Jekyll, I found it tiresome setting the filename with the correct date format, and then also adding it to the post parameters. So I thought it would be fun and useful to create a small simple function that automates the initialization of the md file and file name. :slightly_smiling_face:
 
 ## Features
 The script initialises the Jekyll post md file with the following parameters;
 * **layout** - set to "post" which is the type of layout this function will be used for.
-* **title** - Set with the -PostTitle function parameter
-* **date** - Defaults to the current date formatted correctly for the Jekyll file
-* **categories** - Set by the user with the -Categories function parameter
-* **tags** - Set by the user with the -Tags function parameter
+* **title** - Set with the -PostTitle function parameter.
+* **date** - Defaults to the current date formatted correctly for the Jekyll file.
+* **categories** - Set by the user with the -Categories function parameter.
+* **tags** - Set by the user with the -Tags function parameter.
 * **comments** - Set to true.
 * **imgpath** - Custom parameter that contains the relative path to an image directory for the current post.
 
@@ -111,7 +111,7 @@ $CreateString | Out-File $BlogFilePath -Encoding ascii
 
 Images can then be accessed within the md file using;
 ```html
-<img src="{{ page.imgpath }}/imagename.png">
+{% raw %}<img src="{{ page.imgpath }}/imagename.png">{% endraw %}
 ```
 
 I also added a **DoNotOpen** switch to the function, in case the user does not want to open the file immediately after it's created. By default, it is opened in the users default md file editor;
