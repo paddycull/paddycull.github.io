@@ -1,15 +1,12 @@
 ---
 layout: post
 title: New-JekyllBlogPost PowerShell function
-date: {}
-categories:
-  - PowerShell
-  - Jekyll
-tags:
-  - automation
+date: 2020-03-17 19:50:24
+categories: [PowerShell, Jekyll]
+tags: [automation]
 comments: true
 seo:
-  date_modified: '2020-03-19 09:47:42 +0000'
+  date_modified: '2020-03-31 09:47:42 +0000'
 published: true
 ---
 *Update 2020-03-31 - The function now automatically creates an image directory and variable for all new posts. Details below.*
