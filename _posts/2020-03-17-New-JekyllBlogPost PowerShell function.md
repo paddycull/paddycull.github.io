@@ -6,7 +6,12 @@ categories: [PowerShell, Jekyll]
 tags: [automation]
 comments: true
 seo:
+<<<<<<< HEAD
   date_modified: 2020-03-31 13:39:56 +0100
+=======
+  date_modified: '2020-03-31 09:47:42 +0000'
+published: true
+>>>>>>> 2a19d7079395e0a509fa4023292656b5b8297a28
 ---
 *Update 2020-03-31 - The function now automatically creates an image directory and variable for all new posts. Details below.*
 
@@ -39,7 +44,7 @@ New-JekyllBlogPost -PostTitle "New-JekyllBlogPost PowerShell function" -Categori
 ```
 
 This command will do the following; 
-* Creates a new file called '2020-03-17-New-JekyllBlogPost PowerShell function.md', in within the posts directory of where the **$LocalSiteDirectory** variable of the function is set to
+* Creates a new file called '2020-03-17-New-JekyllBlogPost PowerShell function.md', in within the posts directory of the **$LocalSiteDirectory**
 * Sets all parameters outlined above.
 * Sets the date parameter in the Jekyll file to the current date time in the required format. 
 * Sets up an image directory using the post name, within the /assets/img/ directory of the site, and sets the imgpath parameter to this value.
@@ -109,10 +114,14 @@ Finally, create the file with the string from above. It is important to use **-E
 $CreateString | Out-File $BlogFilePath -Encoding ascii
 ```
 
+Images can then be accessed within the md file using;
+```html
+<img src="{{ page.imgpath }}/imagename.png">
+```
+
 I also added a **DoNotOpen** switch to the function, in case the user does not want to open the file immediately after it's created. By default, it is opened in the users default md file editor;
 ```powershell
 if(!$DoNotOpen) {
     Invoke-Item $BlogFilePath
 }
 ```
-
