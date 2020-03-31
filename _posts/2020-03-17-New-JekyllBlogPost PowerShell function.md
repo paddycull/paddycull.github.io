@@ -8,6 +8,8 @@ comments: true
 seo:
   date_modified: 2020-03-19 09:47:42 +0000
 ---
+*Update 2020-03-31 - The function now automatically creates an image directory and variable for all new posts. Details below.*
+
 This is my first blog post on this site. I thought it would be appropriate to use it to share a small, simple PowerShell script I created to automatically initialise a Jekyll post .md file with the required parameters. :slightly_smiling_face:
 
 The code is available on my GitHub <a target="_blank" href='https://github.com/paddycull/New-JekyllBlogPost'>here</a> 
@@ -23,6 +25,7 @@ The script initialises the Jekyll post md file with the following parameters;
 * **categories** - Set by the user with the -Categories function parameter
 * **tags** - Set by the user with the -Tags function parameter
 * **comments** - Set to true.
+* **imgpath** - Custom parameter that contains the relative path to an image directory for the current post.
 
 
 It creates the file in the directory that LocalPostDirectory variable is set to, which should be set to the _posts directory of the Jekyll site on the users machine.
@@ -35,9 +38,21 @@ A simple example is;
 New-JekyllBlogPost -PostTitle "New-JekyllBlogPost PowerShell function" -Categories "PowerShell", "Jekyll" -Tags "automation"
 ```
 
-This creates a new file called '2020-03-17-New-JekyllBlogPost PowerShell function.md', in whatever directory the **$LocalPostDirectory** variable of the function is set to, and sets the category and tags. Note the current date is set in the filename, as required by Jekyll. It also sets the date in the Jekyll file to the current date time in the required format. Code snippets and explanations are below.
+This command will do the following; 
+* Creates a new file called '2020-03-17-New-JekyllBlogPost PowerShell function.md', in within the posts directory of where the **$LocalSiteDirectory** variable of the function is set to
+* Sets all parameters outlined above.
+* Sets the date parameter in the Jekyll file to the current date time in the required format. 
+* Sets up an image directory using the post name, within the /assets/img/ directory of the site, and sets the imgpath parameter to this value.
+
+Code snippets and explanations are below.
 
 ## The Code
+First we need to initialise the local image and post directories, based on what the **$LocalSiteDirectory** parameter;
+```powershell
+$LocalPostDirectory = "$LocalSiteDirectory\_posts"
+$LocalImageRootDirectory = "$LocalSiteDirectory\assets\img\posts\"
+```
+
 The **datetime** parameter is set to the current date and time in the correct format for Jekyll, within the function declaration itself;
 ```powershell
 [string] $datetime = (Get-Date -Format "yyyy-MM-dd HH:mm:ss"),
@@ -49,7 +64,22 @@ $TagsJoined = ($Tags -join ', ').ToLower()
 $CategoriesJoined = $Categories -join ', '
 ```
 
-It then sets the string that will be used to initialise the Jekyll md file. Here you can see how the variables are used.
+Setup the filename of the post, using the current date along with the post title, and creates it in the directory specified with the **LocalPostDirectory** parameter.
+
+```powershell
+$PostDateForFile = (Get-Date -Format "yyyy-MM-dd").ToString() + "-"
+$BlogFilePath = "$LocalPostDirectory\${PostDateForFile}${PostTitle}.md"
+```
+
+Initialise a new image directory, which name is based on the post title. RelativeImageDirectory is what the md file will use.
+```powershell
+    $JoinedPostTitle = ("${PostDateForFile}${PostTitle}" -replace ' ', '_')
+    $LocalPostImageDirectory = $LocalImageRootDirectory + $JoinedPostTitle
+    New-Item $LocalPostImageDirectory -ItemType Directory -Force | Out-Null
+    $RelativeImageDirectory = "/assets/img/posts/$JoinedPostTitle"
+```
+
+Setup the string that will be used to initialise the Jekyll md file. Here you can see how the variables are used.
 ```powershell
 $CreateString = @"
 ---
@@ -59,18 +89,12 @@ date: $datetime
 categories: [$CategoriesJoined]
 tags: [$TagsJoined]
 comments: true
+imgpath: $RelativeImageDirectory
 ---
 "@
 ```
 
-The function then sets the filename of the post, using the current date along with the post title, and creates it in the directory specified with the **LocalPostDirectory** parameter.
-
-```powershell
-$PostDateForFile = (Get-Date -Format "yyyy-MM-dd").ToString() + "-"
-$BlogFilePath = "$LocalPostDirectory\${PostDateForFile}${PostTitle}.md"
-```
-
-Before creating the file, we should check if the file already exists, and warn the user if it is, and get them to confirm the overwrite;
+Before creating the file, check if the file already exists, and warn the user if it is, and get them to confirm the overwrite;
 ```powershell
 if(Test-Path $BlogFilePath) {
     $ConfirmOverwrite = Read-Host "$BlogFilePath already exists. Do you want to overwrite it? (y/n)"
@@ -80,7 +104,7 @@ if(Test-Path $BlogFilePath) {
     }
 }
 ```
-Finally, we create the file with the string from above. It is important to use **-Encoding ascii** , as without it PowerShell default encoding does not work with Jekyll.
+Finally, create the file with the string from above. It is important to use **-Encoding ascii** , as without it PowerShell default encoding does not work with Jekyll.
 ```powershell
 $CreateString | Out-File $BlogFilePath -Encoding ascii
 ```
