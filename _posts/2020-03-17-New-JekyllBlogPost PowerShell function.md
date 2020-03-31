@@ -6,7 +6,7 @@ categories: [PowerShell, Jekyll]
 tags: [automation]
 comments: true
 seo:
-  date_modified: 2020-03-19 09:47:42 +0000
+  date_modified: 2020-03-31 13:39:56 +0100
 ---
 *Update 2020-03-31 - The function now automatically creates an image directory and variable for all new posts. Details below.*
 
