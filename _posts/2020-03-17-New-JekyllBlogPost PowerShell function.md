@@ -3,7 +3,7 @@ layout: post
 title: New-JekyllBlogPost PowerShell function
 date: 2020-03-17 19:50:24
 categories: [PowerShell, Jekyll]
-tags: [automation]
+tags: [automation,powershell]
 comments: true
 seo:
   date_modified: 2020-03-31 13:39:56 +0100
