@@ -6,6 +6,8 @@ categories: [PowerShell, SqlServer, Patching]
 tags: [powershell, sqlserver, patching, pssqlpatch]
 comments: true
 imgpath: /assets/img/posts/2020-06-10-PSSqlPatch_Version_1.0
+seo:
+  date_modified: 2020-06-10 20:10:21 +0100
 ---
 I'm excited to announce that I've released a major update to my PSSqlPatch module, which is available on my Github <a href="https://github.com/paddycull/PSSqlPatch" target="_blank">here</a>. This update brings a lot of new functions to the module. It now has functions which cover everything you need for managing SQL Server patching.
 * **Downloading** - The module has functions to check for and download the latest SQL Server patches from Microsoft. 
