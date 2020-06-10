@@ -9,9 +9,10 @@ imgpath: /assets/img/posts/2020-06-10-PSSqlPatch_Version_1.0
 seo:
   date_modified: 2020-06-10 20:10:21 +0100
 ---
+<img src="https://raw.githubusercontent.com/paddycull/PSSqlPatch/master/images/PSSqlPatch_logo.PNG" alt="PSSqlPatch logo">
 I'm excited to announce that I've released a major update to my PSSqlPatch module, which is available on my Github <a href="https://github.com/paddycull/PSSqlPatch" target="_blank">here</a>. This update brings a lot of new functions to the module. It now has functions which cover everything you need for managing SQL Server patching.
 * **Downloading** - The module has functions to check for and download the latest SQL Server patches from Microsoft. 
-* **Applying** - The module contains multiple functions to apply patches, either automatically applying the latest applicable patch available from a specified share, or via a full path to the patch file.
+* **Applying** - The module contains multiple functions to apply patches, either automatically applying the latest applicable patch from a specified share, or via a full path to the patch file.
 * **Reporting** - There's a function to report if a given list of servers have been updated to the latest available patch or not.
 
 Full descriptions, examples and output of each of the functions are on the <a href="https://github.com/paddycull/PSSqlPatch" target="_blank">Github page</a>, so check it out if this sounds interesting. :slightly_smiling_face:
