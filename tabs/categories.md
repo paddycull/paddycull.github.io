@@ -1,5 +1,6 @@
 ---
 title: Categories
+noindex: true
 
 # All the Categories of posts
 # v2.0
