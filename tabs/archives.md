@@ -1,5 +1,6 @@
 ---
 title: Archives
+noindex: true
 
 # The Archives of posts.
 # v2.0
