@@ -159,6 +159,7 @@ def generate_tag_pages(is_verbose):
             html.write("layout: {}\n".format(TAG_LAYOUT))
             html.write("title: {}\n".format(tag))
             html.write("tag: {}\n".format(tag))
+            html.write("noindex: true{}\n")
             html.write("---")
 
             if is_verbose:
