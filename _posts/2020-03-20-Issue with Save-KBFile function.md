@@ -10,6 +10,8 @@ seo:
   date_modified: 2020-03-21 20:36:39 +0000
 ---
 
+***Update 2022-02-06** - I ran into a new issue with this function, separate from the one detailed below. Microsoft have changed the URL format, so Save-KBFile no longer worked. I've fixed the URL string search and uploaded it to https://github.com/paddycull/PSSqlPatch/blob/master/Private/Save-KBFile.ps1 as part of my PSSqlPatch module*
+
 I was recently working on a way to use PowerShell to download SQL Server patches automatically. I came across a great function by Chrissy LeMaire (creator of the excellent <a href="https://dbatools.io/">dbatools</a> module), called "Save-KBFile", on Github <a href="https://gist.github.com/potatoqualitee/b5ed9d584c79f4b662ec38bd63e70a2d">here</a>.
 
 The function worked great it seemed, you simply give it the KB number , and optionally a download location, and it downloads the file from Microsoft. Exactly what I needed!
